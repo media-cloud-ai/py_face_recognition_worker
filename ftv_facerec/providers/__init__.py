@@ -1,0 +1,1 @@
+from ftv_facerec.providers.face_recognition_provider import FaceRecognitionProvider
