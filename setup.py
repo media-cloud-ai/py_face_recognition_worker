@@ -1,17 +1,17 @@
 from setuptools import find_packages, setup
-from ftv_facerec import __version__
+import ftv_facerec
 
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name='ftv_facerec',
-    version=__version__,
+    name=ftv_facerec.name,
+    version=ftv_facerec.__version__,
     packages=find_packages(""),
     author="France Télévisions innovations et développement",
     author_email="mathia.haure-touze.ext@francetv.fr",
-    description="Face recognition worker",
+    description=ftv_facerec.description,
     long_description=long_description,
     long_description_content_type="text/markdown",
     install_requires=[
@@ -21,5 +21,8 @@ setup(
         "Programming Language :: Python :: 3.7",
         "License :: MIT",
         "Operating System :: OS Independent",
-    ]
+    ],
+    entry_points = {    
+        'console_scripts': ['ftv_facerec=ftv_facerec.main:main'],
+    }
  )

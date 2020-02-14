@@ -51,4 +51,5 @@ def get_parameters():
 
 
 def process(parameters):
+    ftv_facerec.main.analyze_video(**parameters)
     return
