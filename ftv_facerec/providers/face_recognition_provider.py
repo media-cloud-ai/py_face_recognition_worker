@@ -22,13 +22,9 @@ class FaceRecognitionProvider(BaseProvider):
             Glob path pattern
         recursive : bool, optional
             Glob recursive option, by default False
-        
-        Returns
-        -------
-        tuple
-            Tuple of list where first is known faces encoded and second
-            corresponding filename
         """
+        self.known_faces = []
+        self.known_names = []
 
         for filename in glob.glob(path_pattern, recursive=recursive):
 

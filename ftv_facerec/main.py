@@ -55,7 +55,7 @@ def analyze_video(source_path, persons_path, destination_path, provider_name, sa
             total=length):
             output_json["frames"].append(frame_json)
 
-    with open(output_json_path, "w+") as f:
+    with open(output_json_path, "w") as f:
         f.write(json.dumps(output_json))
 
 
